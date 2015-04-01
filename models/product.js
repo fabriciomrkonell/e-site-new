@@ -47,6 +47,7 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         Product.belongsTo(models.Department);
         Product.hasMany(models.Association, { onDelete: 'cascade' });
+        Product.hasMany(models.Feature, { onDelete: 'cascade' });
       }
     }
   })

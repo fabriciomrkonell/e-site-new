@@ -36,6 +36,10 @@ define(['angularAMD', 'angular-route', 'angular-sanitize', 'autocomplete'], func
       templateUrl: '/view/persistsaleproduct',
       controller: 'persistsaleproduct',
       controllerUrl: '/js/persistsaleproduct',
+    })).when('/searchfeature/:id', angularAMD.route({
+      templateUrl: '/view/searchfeature',
+      controller: 'searchfeature',
+      controllerUrl: '/js/searchfeature',
     })).when('/searchuserpassword', angularAMD.route({
       templateUrl: '/view/searchuserpassword',
       controller: 'searchuserpassword',

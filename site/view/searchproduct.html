@@ -26,7 +26,7 @@
 						<span ng-click="order = 'description'" style="cursor: pointer">Descrição</span>
 					</th>
 					<th style="width: 100px" class="text-center">Valor</th>
-					<th style="width: 130px" class="text-center">Ações</th>
+					<th style="width: 230px" class="text-center">Ações</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -34,7 +34,8 @@
 					<td style="width: 150px" class="text-center">{{product.code}}</td>
 					<td>{{product.description}}</td>
 					<td style="width: 100px" class="text-center">{{product.newValue}}</td>
-					<td style="width: 130px" class="text-center">
+					<td style="width: 230px" class="text-center">
+						<a ng-href="#/searchfeature/{{product.id}}" class="btn btn-default btn-xs">Características</a>
 						<a ng-href="#/persistproductpicture/{{product.id}}" class="btn btn-default btn-xs">Imagens</a>
 						<a ng-href="#/persistproduct/{{product.id}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
 						<button ng-click="excluir(product, $index)" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>

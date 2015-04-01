@@ -1,0 +1,24 @@
+<h3>Produto {{dados.Product.description}}</h3>
+<div class="row" ng-repeat="feature in dados.features">
+  <div class="col-sm-3">
+    <div class="form-group">
+      <label>Característica</label>
+      <input type="text" class="form-control" ng-model="feature.feature" placeholder="Característica">
+    </div>
+  </div>
+  <div class="col-sm-7">
+    <div class="form-group">
+      <label>Descrição</label>
+      <textarea style="resize: none" rows="4" class="form-control" ng-model="feature.description" placeholder="Descrição"></textarea>
+    </div>
+  </div>
+  <div class="col-sm-2 text-center">
+    <div class="form-group" style="margin-top: 25px">
+      <button type="button" class="btn btn-default" ng-click="persist(feature)">Salvar</button>
+      <button type="button" style="margin-left: 10px" class="btn btn-default" ng-click="excluir(feature, $index)">Excluir</button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <button type="button" style="margin-left: 10px" class="btn btn-default" ng-click="create()">Nova característica</button>
+</div>

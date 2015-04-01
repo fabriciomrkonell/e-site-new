@@ -25,7 +25,8 @@ var express         = require('express')
   , candidates      = require('./routes/candidates')
   , menu            = require('./routes/menu')
   , page            = require('./routes/page')
-  , email            = require('./routes/email')
+  , email           = require('./routes/email')
+  , feature         = require('./routes/feature')
   , site            = require('./routes/site')
   , grouppage       = require('./routes/grouppage')
   , system          = require('./routes/system')
@@ -282,6 +283,11 @@ app.post('/api/sale-product', isAuthenticated, sale.persistProduct)
 app.post('/api/sale-excel/:id', isAuthenticatedPage, sale.persistExcel)
 app.delete('/api/sale/:id', isAuthenticatedPage, sale.excluir);
 app.delete('/api/sale-product/:id', isAuthenticatedPage, sale.excluirProduct);
+
+// Feature
+app.get('/api/feature/:id', isAuthenticatedPage, feature.getAll);
+app.post('/api/feature', isAuthenticatedPage, feature.persist);
+app.delete('/api/feature/:id', isAuthenticatedPage, feature.excluir);
 
 // Product
 app.get('/api/product', isAuthenticatedPage, product.getAll);
