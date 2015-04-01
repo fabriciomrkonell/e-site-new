@@ -1,0 +1,47 @@
+{% block content %}
+<div class="home-content">
+  <header class="home-content__header">
+    <h1 class="big-title big-title__sale">Ofertas</h1>
+    <section class="home-content__search search-site">
+      {% include 'includes/search-input.html' %}
+    </section>
+  </header>
+  <section class="home-content__products sales-content__products">
+    {% if products.length == 0 %}
+      <div style='text-align: center; margin-top: 10px'>Nenhum produto encontrado!</div>
+    {% endif %}
+    {% for pro in products %}
+    <div class="product-box">
+      <div class="product-box__wrap">
+        <span class="product-box__favorite__star" onclick="star({{pro.Product.id}})" id="star{{pro.Product.id}}">&#9733;</span>
+        <img src="{{pro.Product.picture1}}" alt="" class="product-box__img">
+        <section class="product-description">
+          <div class="product-name line-clamp">
+            <p class="product-name__text">{{pro.Product.description}}</p>
+          </div>
+          <span class="product-price">{{pro.Product.newValue}}</span>
+        </section>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+  <section class="product-paginator">
+    <ul class="product-paginator__list">
+      {% if pagina != 1 %}
+      <li class="product-paginator__item">
+        <a href="javascript:void(0)" onclick="anterior({{pagina}}, {{departamento}}, '{{expressao}}')" class="product-paginator__link">
+          <span aria-hidden="true">Anterior</span>
+        </a>
+      </li>
+      {% endif %}
+      {% if products.length > 20 %}
+      <li class="product-paginator__item">
+        <a href="javascript:void(0)" onclick="proxima({{pagina}}, {{departamento}}, '{{expressao}}')" class="product-paginator__link">{{data2}}
+          <span aria-hidden="true">Próxima</span>
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </section>
+</div>
+{% endblock %}

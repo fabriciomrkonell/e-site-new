@@ -1,0 +1,10 @@
+<ul class="departments-list">
+		<li class="departments-list__item">
+			<a href="/ofertas" class="departments-list__link">Todos</a>
+		</li>
+		{% for dep in departments %}
+    	<li class="departments-list__item {% if dep.id == departamento %} departments-list__item_active {% endif %}">
+    		<a href="/ofertas?dep={{dep.id}}" class="departments-list__link" >{{dep.description}}</a>
+    	</li>
+    {% endfor %}
+</ul>

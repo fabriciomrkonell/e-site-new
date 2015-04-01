@@ -1,0 +1,26 @@
+<h3>
+  Usuários
+  <a href="#/persistuser" class="btn btn-default button-title pull-right">Novo usuário</a>
+</h3>
+<div>
+  <table class="table table-condensed table-bordered">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th style="width: 200px">Email</th>
+        <th style="width: 150px" class="text-center">Grupo</th>
+        <th style="width: 50px" class="text-center">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in dados">
+        <td>{{user.name}}</td>
+        <td style="width: 200px">{{user.email}}</td>
+        <td style="width: 120px" class="text-center">{{user.Group.description}}</td>
+        <td style="width: 50px" class="text-center">
+          <a ng-href="#/persistuser/{{user.id}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

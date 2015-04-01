@@ -1,0 +1,46 @@
+<h3>
+	Produtos
+	<a href="#/persistproduct" style="margin-left: 10px" class="btn btn-default button-title pull-right">Novo produto</a>
+	<a href="#/searchproductstar" class="btn btn-default button-title pull-right">Favoritos</a>
+</h3>
+<div class="row">
+	<div class="col-sm-5">
+ 		<div class="form-group">
+	    <label>Código ou descrição</label>
+	    <input type="text" class="form-control" ng-model="product" placeholder="Código ou descrição">
+	  </div>
+	</div>
+	<div class="col-sm-7">
+		<h4 class="pull-right" style="margin-top: 33px">{{dados.length}} produtos</h4>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<table class="table table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th style="width: 150px" class="text-center" >
+						<span ng-click="order = 'code'" style="cursor: pointer">Código</span>
+					</th>
+					<th>
+						<span ng-click="order = 'description'" style="cursor: pointer">Descrição</span>
+					</th>
+					<th style="width: 100px" class="text-center">Valor</th>
+					<th style="width: 130px" class="text-center">Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="product in dados | filter:product:'code' | orderBy:order:'false'">
+					<td style="width: 150px" class="text-center">{{product.code}}</td>
+					<td>{{product.description}}</td>
+					<td style="width: 100px" class="text-center">{{product.newValue}}</td>
+					<td style="width: 130px" class="text-center">
+						<a ng-href="#/persistproductpicture/{{product.id}}" class="btn btn-default btn-xs">Imagens</a>
+						<a ng-href="#/persistproduct/{{product.id}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+						<button ng-click="excluir(product, $index)" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

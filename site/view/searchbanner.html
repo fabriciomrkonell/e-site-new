@@ -1,0 +1,28 @@
+<h3>Banners</h3>
+<div class="row" ng-repeat="banner in dados">
+	<div class="col-sm-7">
+    <div class="thumbnail">
+      <img id="banner{{banner.id}}" ng-src="{{banner.picture}}">
+    </div>
+	</div>
+  <div class="col-sm-5">
+    <form class="form-inline text-center" id="myForm{{banner.id}}" name="myForm{{banner.id}}" method="post" enctype="multipart/form-data">
+      <input type="file" class="form-control" name="image" accept="image/*" id="pictureinput{{banner.id}}">
+      <button style="margin-left: 10px" type="button" ng-click="submit(banner.id)" class="btn btn-success">Salvar
+      </button>
+    </form>
+    <br>
+    <form class="form-inne text-center">
+      <input type="text" placeholder="URL" ng-model="banner.url" class="form-control" ng-blur="saveURL(banner)" />
+    </form>
+    <br>
+  </div>
+  <div class="form-group text-center" style="margin-top: 50px">
+    <button type="button" class="btn btn-danger" ng-click="excluir(banner.id, $index)">
+      Excluir
+    </button>
+  </div>
+</div>
+<div class="form-group">
+  <button type="button" class="btn btn-success" ng-click="salvar()">Novo banner</button>
+</div>

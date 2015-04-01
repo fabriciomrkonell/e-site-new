@@ -1,0 +1,27 @@
+<h3>
+  Consulta de páginas
+  <a href="#/persistpage" class="btn btn-default button-title pull-right">Nova página</a>
+</h3>
+<div>
+	<table class="table table-condensed table-bordered">
+		<thead>
+			<tr>
+				<th>Descrição</th>
+				<th style="width: 200px">Nome</th>
+				<th style="width: 100px" class="text-center">Posição</th>
+				<th style="width: 80px" class="text-center">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="page in dados">
+				<td>{{page.description}}</td>
+				<td style="width: 250px">{{page.name}}</td>
+				<td style="width: 100px" class="text-center">{{page.position}}</td>
+				<td style="width: 80px" class="text-center">
+					<a ng-href="#/persistpage/{{page.id}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+					<button type="button" ng-click="excluir(page, $index)" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

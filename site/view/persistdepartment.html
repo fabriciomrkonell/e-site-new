@@ -1,0 +1,19 @@
+<h3 ng-if="update">Atualizar departamento</h3>
+<h3 ng-if="!update">Novo departamento</h3>
+<div class="row">
+	<div class="col-sm-5">
+ 		<div class="form-group">
+    	<label>Descrição</label>
+    	<input type="text" class="form-control" ng-model="dados.description" placeholder="Descrição">
+  	</div>
+  	<div class="form-group">
+    	<label>Mensagem</label>
+    	<input type="text" class="form-control" ng-model="dados.message" placeholder="Mensagem">
+  	</div>
+ 		<div class="form-group">
+    	<button type="button" class="btn btn-default" ng-click="persist(dados)">Salvar</button>
+    	<button style="margin-left: 10px" type="button" class="btn btn-default" ng-click="clear()">Novo departamento</button>
+      <a style="margin-left: 10px" href="#/searchdepartment" class="btn btn-default">Departamentos</a>
+  	</div>
+	</div>
+</div>

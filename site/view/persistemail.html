@@ -1,0 +1,42 @@
+<h3 ng-show="update">Atualizar email</h3>
+<h3 ng-show="!update">Novo email</h3>
+<div class="row">
+	<div class="col-sm-5">
+ 		<div class="form-group">
+    	<label>Configurações</label>
+    	<select ng-model="dados.configuration" class="form-control">
+        <option value="work-with-us">Trabalhe conosco</option>
+        <option value="register">Cadastre-se</option>
+        <option value="recover-password">Recuperar senha</option>
+      </select>
+  	</div>
+  	<div class="form-group">
+    	<label>Email</label>
+    	<input type="text" class="form-control" ng-model="dados.email" placeholder="Email">
+  	</div>
+  	<div class="form-group">
+    	<label>Senha</label>
+    	<input type="password" class="form-control" ng-model="dados.password" placeholder="Password">
+  	</div>
+    <div class="form-group">
+      <label>Hostname</label>
+      <input type="text" class="form-control" ng-model="dados.host" placeholder="Hostname">
+    </div>
+    <div class="form-group">
+      <label>Porta</label>
+      <input type="text" class="form-control" ng-model="dados.port" placeholder="Porta">
+    </div>
+  	<div class="form-group">
+    	<label>Status</label>
+    	<select ng-model="dados.status" class="form-control">
+    		<option value="true">Ativado</option>
+        <option value="false">Desativado</option>
+    	</select>
+  	</div>
+ 		<div class="form-group">
+      <button type="button" class="btn btn-default" ng-click="persist(dados)">Salvar</button>
+      <button type="button" style="margin-left: 10px" ng-click="clear()" class="btn btn-default">Novo email</button>
+      <a style="margin-left: 10px" href="#/searchemail" class="btn btn-default">Emails</a>
+  	</div>
+	</div>
+</div>

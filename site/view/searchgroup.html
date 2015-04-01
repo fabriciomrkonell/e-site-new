@@ -1,0 +1,24 @@
+<h3>
+	Grupos de usuários
+	<a href="#/persistgroup" style="margin-left: 10px" class="btn btn-default button-title pull-right">Novo grupo de usuários</a>
+	<a href="#/searchgrouppage" class="btn btn-default button-title pull-right">Páginas por grupo</a>
+</h3>
+<div>
+	<table class="table table-condensed table-bordered">
+		<thead>
+			<tr>
+				<th>Descrição</th>
+				<th style="width: 80px" class="text-center">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="group in dados">
+				<td>{{group.description}}</td>
+				<td style="width: 80px" class="text-center">
+					<a ng-href="#/persistgroup/{{group.id}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+					<button type="button" ng-click="excluir(group, $index)" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,42 @@
+// Footer styles
+.site-footer {
+  background: $rblue;
+  padding: em(20);
+  color: $w;
+  .wrapper {
+    padding: {
+      right: 10px;
+      left: 10px;
+    }
+  }
+}
+
+.site-footer,
+.push-footer {
+  height: 130px;
+}
+
+.ranchobom-logo__footer {
+  background: $w;
+  width: 230px;
+  padding: 15px 20px;
+}
+
+.contact-bravo__content {
+  @include span-columns(9);
+  p {
+    margin: 0;
+  }
+}
+
+.site-footer__logo {
+  @include span-columns(3);
+}
+
+.addr-span {
+  display: block;
+  a {
+    color: $w;
+    text-decoration: underline;
+  }
+}

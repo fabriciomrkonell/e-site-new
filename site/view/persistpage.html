@@ -1,0 +1,23 @@
+<h3 ng-if="update">Atualizar página</h3>
+<h3 ng-if="!update">Nova página</h3>
+<div class="row">
+	<div class="col-sm-5">
+ 		<div class="form-group">
+    	<label>Descrição</label>
+    	<input type="text" class="form-control" ng-model="dados.description" placeholder="Descrição">
+  	</div>
+  	<div class="form-group">
+    	<label>Nome</label>
+    	<input type="text" class="form-control" ng-model="dados.name" placeholder="Nome">
+  	</div>
+    <div class="form-group">
+      <label>Posição</label>
+      <input type="text" class="form-control" ng-model="dados.position" placeholder="Posição">
+    </div>
+ 		<div class="form-group">
+    	<button type="button" class="btn btn-default" ng-click="persist(dados)">Salvar</button>
+      <button type="button" style="margin-left: 10px" ng-click="clear()" class="btn btn-default">Nova página</button>
+      <a style="margin-left: 10px" href="#/searchpage" class="btn btn-default">Páginas</a>
+  	</div>
+	</div>
+</div>

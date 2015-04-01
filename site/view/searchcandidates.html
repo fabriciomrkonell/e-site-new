@@ -1,0 +1,31 @@
+<h3>Candidatos</h3>
+<div class="row">
+	<div class="col-sm-12">
+		<table class="table table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th class="text-center" style="width: 150px">Cidade</th>
+					<th class="text-center" style="width: 150px">Trabalha</th>
+					<th class="text-center" style="width: 150px">Telefone</th>
+					<th class="text-center" style="width: 190px">Salário atual</th>
+					<th class="text-center" style="width: 100px">Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="candidato in dados">
+					<td>{{candidato.nome}}</td>
+					<td class="text-center" style="width: 150px">{{candidato.cidade}}</td>
+					<td class="text-center" style="width: 150px">{{candidato.trabalha}}</td>
+					<td class="text-center" style="width: 150px">{{candidato.telefone}}</td>
+					<td class="text-center" style="width: 190px">{{candidato.salarioAtual}}</td>
+					<td class="text-center" style="width: 100px">
+						<button ng-click="gerarDocumento(candidato.id)" ng-show="candidato.documento != null" type="button" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-file"></i></button>
+						<button ng-click="gerarPDF(candidato.id)" type="button" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-download-alt"></i></button>
+						<button ng-click="excluir(candidato.id, $index)" type="button" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

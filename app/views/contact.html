@@ -1,0 +1,43 @@
+{% block content %}
+<div class="home-content">
+  <header class="home-content__header">
+    <h1 class="big-title big-title__contact">Envie um E-mail</h1>
+  </header>
+
+  <section class="contact-content">
+
+    <div class="contact-fomr">
+      <div class="cv-field">
+        <p>
+          <label for="name" class="cv-label">Nome:</label>
+          <input type="text" name="name" id="name" ng-model="data.name">
+        </p>
+
+        <p>
+          <label for="email" class="cv-label">E-mail:</label>
+          <input type="email" name="email" id="email" ng-model="data.email">
+        </p>
+
+        <p>
+          <label for="phone" class="cv-label">Telefone:</label>
+          <input type="tel" name="phone" id="phone" ng-model="data.phone">
+        </p>
+
+        <p>
+          <label for="subject" class="cv-label">Assunto:</label>
+          <input type="text" name="subject" id="subject" ng-model="data.subject">
+        </p>
+
+        <p>
+          <label for="message" class="cv-label cv-label__tall"><span>Mensagem:</span></label>
+          <textarea class="cv-contact__message" id="message" ng-model="data.message"></textarea>
+        </p>
+      </div>
+      <button type="button" class="btn btn-cv__submit" onclick="enviarMensagem()"><span>Enviar</span></button>
+    </div>
+
+  </section>
+
+
+</div>
+{% endblock %}

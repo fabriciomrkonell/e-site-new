@@ -1,0 +1,202 @@
+// Base styles
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: 'Arial';
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-y: scroll;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+}
+
+body {
+}
+
+a {
+  text-decoration: none;
+  @include transition(all 0.2s ease-in-out);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ng-cloak {
+  display: none;
+}
+
+.sfh {
+  min-height: 100%;
+  margin-bottom: -130px;
+}
+
+.wrapper {
+  width: em(1000);
+  margin-left: auto;
+  margin-right: auto;
+  @include clearfix;
+}
+
+.main-content {
+  position: relative;
+}
+
+.main-content__border {
+  background: $rgrey;
+}
+
+.site-sidebar {
+  background: $w;
+  border-bottom: 10px solid $rgrey;
+  border-left: 10px solid $rgrey;
+  @include span-columns(3);
+}
+
+.site-logo {
+  height: 210px;
+}
+
+.site-logo__img {
+  width: 150px;
+  margin: em(10) auto;
+  padding-top: 25px;
+  display: block;
+}
+
+.big-title {
+  background: $rblue;
+  color: $w;
+  font-size: rem(18);
+  text-transform: uppercase;
+  padding: em(5) em(14);
+}
+
+.big-title__home,
+.big-title__history,
+.big-title__stores,
+.big-title__sale,
+.big-title__cv,
+.big-title__contact {
+  text-align: center;
+}
+
+.departments-list {
+  padding-left: em(15);
+}
+
+.departments-list__item {
+  margin: em(15) 0;
+}
+
+.departments-list__item_active {
+  text-decoration: underline;
+}
+
+.departments-list__link {
+  color: $rblue;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main-content__container {
+  @include span-columns(9);
+  border-right: 10px solid $rgrey;
+}
+
+.banner-site {
+  position: relative;
+  height: 220px;
+}
+
+.banner-site__nav {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  z-index: 999999;
+  a {
+    background: lighten($rblue, 50);
+    color: $w;
+    padding: 5px 10px;
+    &.activeSlide {
+      background: $rblue;
+    }
+  }
+}
+
+.banner-site__img {
+  width: 734px;
+  height: 219px !important;
+}
+
+.home-content {
+  @include clearfix;
+}
+
+.home-content__header {
+  @include clearfix;
+}
+
+.home-content__search,
+.big-title__sale {
+  @include span-columns(4.5 of 9);
+}
+
+.big-title__history,
+.big-title__stores,
+.big-title__cv,
+.big-title__contact {
+  @include span-columns(9 of 9);
+}
+
+.big-title__favs {
+  @include span-columns(8 of 9);
+  text-align: center;
+}
+
+.home-content__search {
+  margin: .67em 0;
+}
+
+.search-site__input {
+  padding: em(5) em(5);
+  float: left;
+  width: 80%;
+  height: 38px;
+  vertical-align: middle;
+}
+
+.btn {
+  border: 0;
+}
+
+.btn-search {
+  background: $rblue;
+  width: 20%;
+  height: 38px;
+  img {
+    vertical-align: middle;
+  }
+}
+
+.btn-print__favs {
+  margin-top: 10px;
+  background: transparent;
+}
+
+.favs-content__print {
+  @include span-columns(1 of 9);
+}
+
+.print-favs__img {
+  vertical-align: middle;
+}

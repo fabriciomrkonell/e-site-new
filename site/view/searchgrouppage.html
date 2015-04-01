@@ -1,0 +1,17 @@
+<h3>Páginas por grupo</h3>
+<table class="table table-condensed table-bordered">
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th style="width: 170px" class="text-center" ng-repeat="group in dados.Groups">{{group.description}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="page in dados.Pages">
+      <td>{{page.description}}</td>
+      <td style="width: 170px" class="text-center" ng-repeat="group in dados.Groups">
+        <input type="checkbox" ng-checked="isChecked(page.id, group.id)" ng-click="persist(page.id, group.id)">
+      </td>
+    </tr>
+  </tbody>
+</table>

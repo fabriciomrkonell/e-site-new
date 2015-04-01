@@ -1,0 +1,26 @@
+<h3>
+  Departamentos
+  <a href="#/persistdepartment" class="btn btn-default button-title pull-right">Novo departamento</a>
+</h3>
+<div>
+	<table class="table table-condensed table-bordered">
+		<thead>
+			<tr>
+				<th style="width: 70px" class="text-center">Código</th>
+				<th style="width: 200px">Descrição</th>
+				<th>Mensagem</th>
+				<th style="width: 80px" class="text-center">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="department in dados">
+				<td style="width: 70px" class="text-center">{{department.id}}</td>
+				<td style="width: 200px">{{department.description}}</td>
+				<td>{{department.message}}</td>
+				<td style="width: 80px" class="text-center">
+					<a ng-href="#/persistdepartment/{{department.id}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

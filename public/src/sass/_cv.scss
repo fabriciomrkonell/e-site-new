@@ -1,0 +1,46 @@
+// CV!
+.cv-joinus {
+  margin-bottom: 80px;
+}
+
+.cv-field {
+  margin-bottom: 20px;
+  p {
+    margin: 8px 0;
+  }
+
+  textarea,
+  input[type="tel"],
+  input[type="email"],
+  input[type="text"] {
+    width: 300px;
+  }
+}
+
+.cv-experience__message,
+.cv-contact__message {
+  resize: none;
+  height: 200px;
+  border: 1px solid darken($rg, 10);
+}
+
+.cv-label {
+  background: lighten($rg, 5);
+  text-align: right;
+  margin-right: 10px;
+  float: left;
+  width: 240px;
+  padding: 0 5px;
+}
+
+.cv-label__required {
+  font-weight: bold;
+}
+
+.btn-cv__submit {
+  background: $rblue;
+  color: $w;
+  padding: 8px 15px;
+  text-transform: uppercase;
+  margin-left: 250px;
+}

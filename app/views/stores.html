@@ -1,0 +1,93 @@
+{% block content %}
+
+<div class="home-content">
+  <header class="home-content__header">
+    <h1 class="big-title big-title__stores">Lojas</h1>
+  </header>
+
+  <section class="stores-container">
+    <div class="store-box">
+      <div class="store-info__payment-icon">
+        <img class="store-info__payment" src="/img/payments/alelo.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/american.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/cabal.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/cba.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/elo.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/green.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/cabal.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/hiper.png" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/master.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/maestro.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/personal.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/sodexo.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/trio.png" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/visa.jpg" alt="Supermercados Rancho Bom">
+        <img class="store-info__payment" src="/img/payments/visa-electron.jpg" alt="Supermercados Rancho Bom">
+      </div>
+    </div>
+    {% for store in stores %}
+    <div class="store-box">
+      <h2 class="store-box__title">{{store.name}}</h2>
+      <div class="store-box__a store-box__col">
+        <div id="stores-site__content{{store.id}}">
+          <img class="store-box__img" src="{{store.picture1}}">
+          {% if store.picture2 != '/img/nopicture/store.png' %}
+            <img class="store-box__img" src="{{store.imagem2}}">
+          {% endif %}
+
+          {% if store.picture3 != '/img/nopicture/store.png' %}
+            <img class="store-box__img" src="{{store.imagem3}}">
+          {% endif %}
+
+          {% if store.picture4 != '/img/nopicture/store.png' %}
+            <img class="store-box__img" src="{{store.imagem4}}">
+          {% endif %}
+        </div>
+      </div>
+      <div class="store-box__b store-box__col store-info">
+        <ul class="store-info__list">
+          <li class="store-info__item">
+            <span><img class="store-info__icon" src="build/img/phone.png"></span>{{store.phone}}
+          </li>
+          <li class="store-info__item">
+            <span>
+              <img class="store-info__icon" src="build/img/email.png">
+            </span>
+            <a href="mailto:{{store.email}}">{{store.email}}</a>
+          </li>
+          <li class="store-info__item">
+            <span>
+              <img class="store-info__icon" src="build/img/user.png">
+            </span>
+            Gerente: {{store.manager}}
+            </li>
+          <li class="store-info__item">
+            <span>
+              <img class="store-info__icon" src="build/img/clock.png">
+            </span>
+            {{store.treatment}}
+          </li>
+          {% if store.lat != '' and store.lon != '' %}
+            <li class="store-info__item">
+              <span>
+                <img class="store-info__icon" src="build/img/map.png">
+              </span>
+              <a href="https://www.google.com.br/maps/dir//{{store.lat}},{{store.lon}}/@{{store.lat}},{{store.lon}},16z" target="_blank">Como chegar</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      $('#stores-site__content{{store.id}}').cycle({
+        fx: 'fade',
+        speed: 'fast'
+      });
+    </script>
+    {% endfor %}
+
+  </section>
+
+</div>
+{% endblock %}

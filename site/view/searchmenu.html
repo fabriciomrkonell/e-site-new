@@ -1,0 +1,31 @@
+<h3>
+  Consulta de menus
+  <a href="#/persistmenu/" class="btn btn-default button-title pull-right">Novo menu</a>
+</h3>
+<div>
+	<table class="table table-condensed table-bordered">
+		<thead>
+			<tr>
+				<th>Descrição</th>
+				<th style="width: 250px">URL</th>
+				<th style="width: 100px" class="text-center">Visível</th>
+				<th style="width: 100px" class="text-center">Ordenação</th>
+				<th style="width: 80px" class="text-center">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="menu in dados">
+				<td>{{menu.description}}</td>
+				<td style="width: 250px">{{menu.url}}</td>
+				<td style="width: 100px" class="text-center">
+					<input type="checkbox" ng-model="menu.status" ng-click="persist(menu)">
+				</td>
+				<td style="width: 100px" class="text-center">{{menu.position}}</td>
+				<td style="width: 80px" class="text-center">
+					<a ng-href="#/persistmenu/{{menu.id}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+					<button type="button" ng-click="excluir(menu, $index)" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

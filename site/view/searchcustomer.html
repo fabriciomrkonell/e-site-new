@@ -1,0 +1,25 @@
+<h3>Clientes</h3>
+<div class="row">
+	<div class="col-sm-12">
+		<table class="table table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th class="text-center" style="width: 250px">Email</th>
+					<th class="text-center" style="width: 150px">Telefone</th>
+					<th class="text-center" style="width: 80px">Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="customer in dados">
+					<td>{{customer.name}}</td>
+					<td class="text-center" style="width: 250px">{{customer.email}}</td>
+					<td class="text-center" style="width: 150px">{{customer.phone}}</td>
+					<td class="text-center" style="width: 80px">
+						<button ng-click="excluir(customer, $index)" type="button" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

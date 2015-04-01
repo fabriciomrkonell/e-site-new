@@ -1,0 +1,59 @@
+<h3>
+  Imagens loja {{dados.name}}
+</h3>
+<div class="row">
+	<div class="col-sm-7">
+    <div class="thumbnail">
+      <img id="picture1" ng-src="{{dados.picture1}}">
+    </div>
+	</div>
+  <div class="col-sm-5">
+    <form class="form-inline text-center" id="myForm1" name="myForm1" method="post" enctype="multipart/form-data">
+      <input type="file" class="form-control" name="image" accept="image/*" id="pictureinput1">
+      <button style="margin-left: 10px" type="button" ng-click="submit(dados.id, 1)" class="btn btn-default">Salvar
+      </button>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-7">
+    <div class="thumbnail">
+      <img id="picture2" ng-src="{{dados.picture2}}">
+    </div>
+  </div>
+  <div class="col-sm-5">
+    <form class="form-inline text-center" id="myForm2" name="myForm2" method="post" enctype="multipart/form-data">
+      <input type="file" class="form-control" name="image" accept="image/*" id="pictureinput2">
+      <button style="margin-left: 10px" type="button" ng-click="submit(dados.id, 2)" class="btn btn-default">Salvar
+      </button>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-7">
+    <div class="thumbnail">
+      <img id="picture3" ng-src="{{dados.picture3}}">
+    </div>
+  </div>
+  <div class="col-sm-5">
+    <form class="form-inline text-center" id="myForm3" name="myForm3" method="post" enctype="multipart/form-data">
+      <input type="file" class="form-control" name="image" accept="image/*" id="pictureinput3">
+      <button style="margin-left: 10px" type="button" ng-click="submit(dados.id, 3)" class="btn btn-default">Salvar
+      </button>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-7">
+    <div class="thumbnail">
+      <img id="picture4" ng-src="{{dados.picture4}}">
+    </div>
+  </div>
+  <div class="col-sm-5">
+    <form class="form-inline text-center" id="myForm4" name="myForm4" method="post" enctype="multipart/form-data">
+      <input type="file" class="form-control" name="image" accept="image/*" id="pictureinput4">
+      <button style="margin-left: 10px" type="button" ng-click="submit(dados.id, 4)" class="btn btn-default">Salvar
+      </button>
+    </form>
+  </div>
+</div>

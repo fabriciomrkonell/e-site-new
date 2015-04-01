@@ -1,0 +1,246 @@
+{% block content %}
+<div class="home-content">
+  <header class="home-content__header">
+    <h1 class="big-title big-title__cv">Trabalhe Conosco</h1>
+  </header>
+
+<form name="myForm" method="post" action="/trabalhe-conosco" enctype="multipart/form-data">
+  <section class="cv-joinus">
+    <p class="cv-joinus__at">Os campos marcados com * são de preenchimento obrigatório.</p>
+    <form class="cv-form">
+      <div class="cv-field cv-a">
+        <p>
+          <label class="cv-label cv-label__required" for="fullname">Nome Completo: *</label>
+          <input type="text" name="nome" value="{{data.nome}}">
+        </p>
+
+        <p>
+          <label class="cv-label cv-label__required" for="email">E-mail: *</label>
+          <input type="text" name="email" value="{{data.email}}">
+        </p>
+        <p>
+          <label class="cv-label cv-label__required" for="dob">Data de Nascimento: *</label>
+          <select name="day">
+            <option {% if data.day == '01' %} selected {% endif %} value="01">1</option>
+            <option {% if data.day == '02' %} selected {% endif %} value="02">2</option>
+            <option {% if data.day == '03' %} selected {% endif %} value="03">3</option>
+            <option {% if data.day == '04' %} selected {% endif %} value="04">4</option>
+            <option {% if data.day == '05' %} selected {% endif %} value="05">5</option>
+            <option {% if data.day == '06' %} selected {% endif %} value="06">6</option>
+            <option {% if data.day == '07' %} selected {% endif %} value="07">7</option>
+            <option {% if data.day == '08' %} selected {% endif %} value="08">8</option>
+            <option {% if data.day == '09' %} selected {% endif %} value="09">9</option>
+            <option {% if data.day == '10' %} selected {% endif %} value="10">10</option>
+            <option {% if data.day == '11' %} selected {% endif %} value="11">11</option>
+            <option {% if data.day == '12' %} selected {% endif %} value="12">12</option>
+            <option {% if data.day == '13' %} selected {% endif %} value="13">13</option>
+            <option {% if data.day == '14' %} selected {% endif %} value="14">14</option>
+            <option {% if data.day == '15' %} selected {% endif %} value="15">15</option>
+            <option {% if data.day == '16' %} selected {% endif %} value="16">16</option>
+            <option {% if data.day == '17' %} selected {% endif %} value="17">17</option>
+            <option {% if data.day == '18' %} selected {% endif %} value="18">18</option>
+            <option {% if data.day == '19' %} selected {% endif %} value="19">19</option>
+            <option {% if data.day == '20' %} selected {% endif %} value="20">20</option>
+            <option {% if data.day == '21' %} selected {% endif %} value="21">21</option>
+            <option {% if data.day == '22' %} selected {% endif %} value="22">22</option>
+            <option {% if data.day == '23' %} selected {% endif %} value="23">23</option>
+            <option {% if data.day == '24' %} selected {% endif %} value="24">24</option>
+            <option {% if data.day == '25' %} selected {% endif %} value="25">25</option>
+            <option {% if data.day == '26' %} selected {% endif %} value="26">26</option>
+            <option {% if data.day == '27' %} selected {% endif %} value="27">27</option>
+            <option {% if data.day == '28' %} selected {% endif %} value="28">28</option>
+            <option {% if data.day == '29' %} selected {% endif %} value="29">29</option>
+            <option {% if data.day == '30' %} selected {% endif %} value="30">30</option>
+            <option {% if data.day == '31' %} selected {% endif %} value="31">31</option>
+          </select>
+          <select name="month">
+            <option {% if data.month == '01 ' %} selected {% endif %} value="01">Janeiro</option>
+            <option {% if data.month == '02' %} selected {% endif %} value="02">Fevereiro</option>
+            <option {% if data.month == '03' %} selected {% endif %} value="03">Março</option>
+            <option {% if data.month == '04' %} selected {% endif %} value="04">Abril</option>
+            <option {% if data.month == '05' %} selected {% endif %} value="05">Maio</option>
+            <option {% if data.month == '06' %} selected {% endif %} value="06">Junho</option>
+            <option {% if data.month == '07' %} selected {% endif %} value="07">Julho</option>
+            <option {% if data.month == '08' %} selected {% endif %} value="08">Agosto</option>
+            <option {% if data.month == '09' %} selected {% endif %} value="09">Setembro</option>
+            <option {% if data.month == '10' %} selected {% endif %} value="10">Outubro</option>
+            <option {% if data.month == '11' %} selected {% endif %} value="11">Novembro</option>
+            <option {% if data.month == '12' %} selected {% endif %} value="12">Dezembro</option>
+          </select>
+          <select name="year">
+            <option {% if data.year == '1965' %} selected {% endif %} value="1965">1965</option>
+            <option {% if data.year == '1966' %} selected {% endif %} value="1966">1966</option>
+            <option {% if data.year == '1967' %} selected {% endif %} value="1967">1967</option>
+            <option {% if data.year == '1968' %} selected {% endif %} value="1968">1968</option>
+            <option {% if data.year == '1969' %} selected {% endif %} value="1969">1969</option>
+            <option {% if data.year == '1970' %} selected {% endif %} value="1970">1970</option>
+            <option {% if data.year == '1971' %} selected {% endif %} value="1971">1971</option>
+            <option {% if data.year == '1972' %} selected {% endif %} value="1972">1972</option>
+            <option {% if data.year == '1973' %} selected {% endif %} value="1973">1973</option>
+            <option {% if data.year == '1974' %} selected {% endif %} value="1974">1974</option>
+            <option {% if data.year == '1975' %} selected {% endif %} value="1975">1975</option>
+            <option {% if data.year == '1976' %} selected {% endif %} value="1976">1976</option>
+            <option {% if data.year == '1977' %} selected {% endif %} value="1977">1977</option>
+            <option {% if data.year == '1978' %} selected {% endif %} value="1978">1978</option>
+            <option {% if data.year == '1979' %} selected {% endif %} value="1979">1979</option>
+            <option {% if data.year == '1980' %} selected {% endif %} value="1980">1980</option>
+            <option {% if data.year == '1981' %} selected {% endif %} value="1981">1981</option>
+            <option {% if data.year == '1982' %} selected {% endif %} value="1982">1982</option>
+            <option {% if data.year == '1983' %} selected {% endif %} value="1983">1983</option>
+            <option {% if data.year == '1984' %} selected {% endif %} value="1984">1984</option>
+            <option {% if data.year == '1985' %} selected {% endif %} value="1985">1985</option>
+            <option {% if data.year == '1986' %} selected {% endif %} value="1986">1986</option>
+            <option {% if data.year == '1987' %} selected {% endif %} value="1987">1987</option>
+            <option {% if data.year == '1988' %} selected {% endif %} value="1988">1988</option>
+            <option {% if data.year == '1989' %} selected {% endif %} value="1989">1989</option>
+            <option {% if data.year == '1990' %} selected {% endif %} value="1990">1990</option>
+            <option {% if data.year == '1991' %} selected {% endif %} value="1991">1991</option>
+            <option {% if data.year == '1992' %} selected {% endif %} value="1992">1992</option>
+            <option {% if data.year == '1993' %} selected {% endif %} value="1993">1993</option>
+            <option {% if data.year == '1994' %} selected {% endif %} value="1994">1994</option>
+            <option {% if data.year == '1995' %} selected {% endif %} value="1995">1995</option>
+            <option {% if data.year == '1996' %} selected {% endif %} value="1996">1996</option>
+            <option {% if data.year == '1997' %} selected {% endif %} value="1997">1997</option>
+            <option {% if data.year == '1998' %} selected {% endif %} value="1998">1998</option>
+            <option {% if data.year == '1999' %} selected {% endif %} value="1999">1999</option>
+            <option {% if data.year == '2000' %} selected {% endif %} value="2000">2000</option>
+            <option {% if data.year == '2001' %} selected {% endif %} value="2001">2001</option>
+            <option {% if data.year == '2002' %} selected {% endif %} value="2002">2002</option>
+            <option {% if data.year == '2003' %} selected {% endif %} value="2003">2003</option>
+          </select>
+        </p>
+
+        <p>
+          <label class="cv-label cv-label__required">Sexo: *</label>
+          {% if data.sexo == 'Feminino' %}
+            <span><input type="radio" name="sexo" value="Feminino" checked> Feminino</span>
+            <span><input type="radio" name="sexo" value="Masculino"> Masculino</span>
+          {% else %}
+            <span><input type="radio" name="sexo" value="Feminino"> Feminino</span>
+            <span><input type="radio" name="sexo" value="Masculino" checked> Masculino</span>
+          {% endif %}
+        </p>
+      </div>
+
+      <div class="cv-field cv-b">
+        <p>
+          <label for="bairro" class="cv-label cv-label__required">Bairro: *</label>
+          <input type="text" name="bairro" value="{{data.bairro}}">
+        </p>
+
+        <p>
+          <label for="city" class="cv-label cv-label__required">Cidade: *</label>
+          <input type="text" name="cidade" value="{{data.cidade}}">
+        </p>
+
+        <p>
+          <label class="cv-label cv-label__required">Estado: *</label>
+          <select name="estado">
+            <option {% if data.estado == 'Santa Catarina' %} selected {% endif %} value="Santa Catarina">Santa Catarina</option>
+            <option {% if data.estado == 'Paraná' %} selected {% endif %} value="Paraná">Paraná</option>
+            <option {% if data.estado == 'Rio Grande do Sul' %} selected {% endif %} value="Rio Grande do Sul">Rio Grande do Sul</option>
+          </select>
+        </p>
+      </div>
+
+      <div class="cv-field cv-c">
+        <p>
+          <label for="phone" class="cv-label cv-label__required">Telefone Residencial: *</label>
+          <input type="tel" name="telefone" value="{{data.telefone}}">
+        </p>
+
+        <p>
+          <label for="cellphone" class="cv-label">Telefone Celular:</label>
+          <input type="tel" name="celular" value="{{data.celular}}">
+        </p>
+      </div>
+
+      <div class="cv-field cv-d">
+        <p>
+          <label class="cv-label">Faixa salarial atual:</label>
+          <select name="salarioAtual">
+            <option {% if data.salarioAtual == 'R$ 950,00 - R$ 1.100,00' %} selected {% endif %} value="R$ 950,00 - R$ 1.100,00">R$ 950,00 - R$ 1.100,00</option>
+            <option {% if data.salarioAtual == 'R$ 1.100,00 - R$ 1.300,00' %} selected {% endif %} value="R$ 1.100,00 - R$ 1.300,00">R$ 1.100,00 - R$ 1.300,00</option>
+            <option {% if data.salarioAtual == 'R$ 1.300,00 - R$ 1.500,00' %} selected {% endif %} value="R$ 1.300,00 - R$ 1.500,00">R$ 1.300,00 - R$ 1.500,00</option>
+            <option {% if data.salarioAtual == 'R$ 1.500,00 - R$ 2.000,00' %} selected {% endif %} value="R$ 1.500,00 - R$ 2.000,00">R$ 1.500,00 - R$ 2.000,00</option>
+            <option {% if data.salarioAtual == 'R$ 2.000,00 - R$ 3.000,00' %} selected {% endif %} value="R$ 2.000,00 - R$ 3.000,00">R$ 2.000,00 - R$ 3.000,00</option>
+            <option {% if data.salarioAtual == 'R$ 3.000,00 - R$ 4.000,00' %} selected {% endif %} value="R$ 3.000,00 - R$ 4.000,00">R$ 3.000,00 - R$ 4.000,00</option>
+            <option {% if data.salarioAtual == 'R$ 3.000,00 - R$ 4.000,00' %} selected {% endif %} value="R$ 3.000,00 - R$ 4.000,00">R$ 4.000,00 - R$ 5.000,00</option>
+          </select>
+        </p>
+
+        <p>
+          <label class="cv-label">Trabalha atualmente?:</label>
+          {% if data.trabalha == 'Sim' %}
+            <span><input type="radio" name="trabalha" value="Sim" checked> Sim</span>
+          <span><input type="radio" name="trabalha" value="Não"> Não</span>
+          {% else %}
+            <span><input type="radio" name="trabalha" value="Sim"> Sim</span>
+          <span><input type="radio" name="trabalha" value="Não" checked> Não</span>
+          {% endif %}
+        </p>
+
+        <p>
+          <label for="ksite" class="cv-label">Como conheceu o site?:</label>
+          <select name="conheceuSite">
+            <option {% if data.conheceuSite == 'Google' %} selected {% endif %} value="Google">Google</option>
+            <option {% if data.conheceuSite == 'Rádio' %} selected {% endif %} value="Rádio">Rádio</option>
+            <option {% if data.conheceuSite == 'Jornal' %} selected {% endif %} value="Jornal">Jornal</option>
+            <option {% if data.conheceuSite == 'Facebook' %} selected {% endif %} value="Facebook">Facebook</option>
+            <option {% if data.conheceuSite == 'Outros' %} selected {% endif %} value="Outros">Outros</option>
+          </select>
+        </p>
+
+        <p>
+          <label class="cv-label" for="position">Cargo Desejado:</label>
+          <input type="text" name="cargo" value="{{data.cargo}}">
+        </p>
+
+        <p>
+          <label for="hier" class="cv-label">Seu nível hierárquico:</label>
+          <select name="hierarquico">
+            <option {% if data.hierarquico == 'Loja' %} selected {% endif %} value="Loja">Loja</option>
+            <option {% if data.hierarquico == 'Administrativo' %} selected {% endif %} value="Administrativo">Administrativo</option>
+            <option {% if data.hierarquico == 'Gerência' %} selected {% endif %} value="Gerência">Gerência</option>
+            <option {% if data.hierarquico == 'Liderança' %} selected {% endif %} value="Liderança">Liderança</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="professional" class="cv-label">Sua área profissional:</label>
+          <select name="area">
+            <option {% if data.area == 'Reposição' %} selected {% endif %} value="Reposição">Reposição</option>
+            <option {% if data.area == 'Empacotamento' %} selected {% endif %} value="Empacotamento">Empacotamento</option>
+            <option {% if data.area == 'Operação de caixa' %} selected {% endif %} value="Operação de caixa">Operação de caixa</option>
+            <option {% if data.area == 'Depósito' %} selected {% endif %} value="Depósito">Depósito</option>
+            <option {% if data.area == 'Açougue' %} selected {% endif %} value="Açougue">Açougue</option>
+            <option {% if data.area == 'Padaria' %} selected {% endif %} value="Padaria">Padaria</option>
+            <option {% if data.area == 'Administrativo' %} selected {% endif %} value="Administrativo">Administrativo</option>
+            <option {% if data.area == 'Liderança' %} selected {% endif %} value="Liderança">Liderança</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="experience" class="cv-label">Experiências Profissionais:</label>
+          <textarea class="cv-experience__message" name="outrasEmpresas">{{data.outrasEmpresas}}</textarea>
+        </p>
+
+        <p>
+          <label for="curriculo" class="cv-label">Currículo:</label>
+          <input type="file" class="form-control" name="curriculo" accept="*/*">
+        </p>
+      </div>
+
+      <button type="submit" class="btn btn-cv__submit"><span>Enviar</span></button>
+    </form>
+  </section>
+</form>
+
+{% if message != null %}
+  <script>
+    alert("{{message}}");
+  </script>
+{% endif %}
+
+</div>
+{% endblock %}

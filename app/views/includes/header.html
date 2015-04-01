@@ -1,0 +1,22 @@
+<header class="main-header" role="banner">
+  <div class="wrapper">
+
+    <div class="dc1">
+      <p class="welcome-message">Seja bem vindo!</p>
+    </div>
+
+    <nav class="dc2 site-nav">
+      <ul class="site-nav__list">
+        {% for menu in menus %}
+          <li class="site-nav__item {% if menu.url == page %} site-nav__item_active {% endif %}"><a href="{{menu.url}}" class="site-nav__link">{{menu.description}}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="dc3">
+      <a href="https://www.facebook.com/ranchobom" target="_blank" class="fb-icon">
+        <img class="fb-icon__img" src="build/img/logo-fb.png" alt="Facebook">
+      </a>
+    </div>
+  </div>
+</header>

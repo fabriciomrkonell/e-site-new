@@ -1,0 +1,29 @@
+<h3>
+  Consulta de emails
+  <a href="#/persistemail" class="btn btn-default button-title pull-right">Novo email</a>
+</h3>
+<div>
+	<table class="table table-condensed table-bordered">
+		<thead>
+			<tr>
+				<th>Email</th>
+				<th style="width: 200px">Configuração</th>
+				<th style="width: 200px">Hostname</th>
+				<th style="width: 100px" class="text-center">Porta</th>
+				<th style="width: 80px" class="text-center">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="email in dados">
+				<td>{{email.email}}</td>
+				<td style="width: 200px">{{getConfiguration(email.configuration)}}</td>
+				<td style="width: 200px">{{email.host}}</td>
+				<td style="width: 100px" class="text-center">{{email.port}}</td>
+				<td style="width: 80px" class="text-center">
+					<a ng-href="#/persistemail/{{email.id}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+					<button type="button" ng-click="excluir(email, $index)" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

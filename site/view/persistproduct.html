@@ -1,0 +1,31 @@
+<h3 ng-show="update">Atualizar produto</h3>
+<h3 ng-show="!update">Novo produto</h3>
+<div class="row">
+	<div class="col-sm-5">
+ 		<div class="form-group">
+    	<label>Código</label>
+    	<input type="text" class="form-control" ng-model="dados.code" placeholder="Código">
+  	</div>
+  	<div class="form-group">
+    	<label>Descrição</label>
+    	<input type="text" class="form-control" ng-model="dados.description" placeholder="Descrição">
+  	</div>
+  	<div class="form-group">
+    	<label>Valor</label>
+    	<input type="text" class="form-control" ng-model="dados.newValue" placeholder="Valor">
+  	</div>
+  	<div class="form-group">
+    	<label>Departamento</label>
+    	<select ng-model="dados.DepartmentId" id="department" class="form-control">
+    		<option value=null>Selecione</option>
+    		<option ng-repeat="department in data.Departments" ng-value="department.id">{{department.description}}</option>
+    	</select>
+  	</div>
+ 		<div class="form-group">
+      <button type="button" class="btn btn-default" ng-click="persist(dados)">Salvar</button>
+      <button type="button" style="margin-left: 10px" ng-click="clear()" class="btn btn-default">Novo produto</button>
+      <a style="margin-left: 10px" href="#/searchproduct" class="btn btn-default">Produtos</a>
+      <a ng-show="update" style="margin-left: 10px" href="#/persistproductpicture/{{dados.id}}" class="btn btn-default">Imagens</a>
+  	</div>
+	</div>
+</div>

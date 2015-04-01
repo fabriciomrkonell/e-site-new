@@ -1,0 +1,26 @@
+{% block content %}
+<div class="home-content">
+  <header class="home-content__header">
+    <h1 class="big-title big-title__sale">Ofertas do dia</h1>
+    <section class="home-content__search search-site">
+      {% include 'includes/search-input.html' %}
+    </section>
+  </header>
+  <section class="home-content__products">
+    {% for pro in products %}
+      <div class="product-box">
+        <div class="product-box__wrap">
+          <span class="product-box__favorite__star" onclick="star({{pro.id}})" id="star{{pro.id}}">&#9733;</span>
+          <img src="{{pro.picture1}}" class="product-box__img">
+          <section class="product-description">
+            <div class="product-name line-clamp">
+              <p class="product-name__text">{{pro.description}}</p>
+            </div>
+            <span class="product-price">{{pro.newValue}}</span>
+          </section>
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+</div>
+{% endblock %}

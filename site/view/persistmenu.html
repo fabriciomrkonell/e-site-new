@@ -1,0 +1,41 @@
+<h3 ng-if="update">Atualizar menu</h3>
+<h3 ng-if="!update">Novo menu</h3>
+<div class="row">
+	<div class="col-sm-5">
+ 		<div class="form-group">
+    	<label>Descrição</label>
+    	<input type="text" class="form-control" ng-model="dados.description" placeholder="Descrição">
+  	</div>
+  	<div class="form-group">
+    	<label>URL</label>
+    	<input type="text" class="form-control" ng-model="dados.url" placeholder="URL">
+  	</div>
+  	<div class="form-group">
+    	<label>Ordenação</label>
+      <select class="form-control" ng-model="dados.position">
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+      </select>
+  	</div>
+  	<div class="form-group">
+      <label>Visível</label>
+      <select class="form-control" ng-model="dados.status">
+        <option value="true">Sim</option>
+        <option value="false">Não</option>
+      </select>
+    </div>
+ 		<div class="form-group">
+    	<button type="button" class="btn btn-default" ng-click="persist(dados)">Salvar</button>
+      <button type="button" style="margin-left: 10px" ng-click="clear(dados)" class="btn btn-default">Novo menu</button>
+      <a style="margin-left: 10px" href="#/searchmenu" class="btn btn-default">Menus</a>
+  	</div>
+	</div>
+</div>

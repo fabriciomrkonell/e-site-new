@@ -1,0 +1,38 @@
+{% block content %}
+<div class="home-content">
+  <header class="home-content__header">
+    <h1 class="big-title big-title__contact">Faça seu cadastro e receba nossas novidades!</h1>
+  </header>
+
+  <section class="contact-content">
+    <form name="myForm" method="post" action="/cadastre-se">
+      <div class="contact-fomr">
+        <div class="cv-field">
+          <p>
+            <label for="name" class="cv-label cv-label__required">Nome: *</label>
+            <input type="text" name="name" id="name" value="{{data.name}}">
+          </p>
+
+          <p>
+            <label for="email" class="cv-label cv-label__required">E-mail: *</label>
+            <input type="text" name="email" id="email" value="{{data.email}}">
+          </p>
+
+          <p>
+            <label for="phone" class="cv-label">Telefone:</label>
+            <input type="text" name="phone" id="phone" value="{{data.phone}}">
+          </p>
+        </div>
+        <button type="submit" class="btn btn-cv__submit"><span>Cadastrar</span></button>
+      </div>
+    </form>
+  </section>
+
+{% if message != null %}
+  <script>
+    alert("{{message}}");
+  </script>
+{% endif %}
+
+</div>
+{% endblock %}

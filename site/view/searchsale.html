@@ -1,0 +1,65 @@
+<h3>
+	Hoje
+	<a href="#/persistsale" class="btn btn-default button-title pull-right">Nova promoção</a>
+</h3>
+<div>
+	<table class="table table-condensed table-bordered">
+		<thead>
+			<tr>
+				<th>Descrição</th>
+				<th style="width: 150px" class="text-center">Data de início</th>
+				<th style="width: 150px" class="text-center">Data de término</th>
+				<th style="width: 100px" class="text-center">Produtos</th>
+				<th style="width: 180px" class="text-center">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="today in dados.today">
+				<td>{{today.description}}</td>
+				<td style="width: 150px" class="text-center">{{getFormatData(today.startDate)}}</td>
+				<td style="width: 150px" class="text-center">{{getFormatData(today.finishDate)}}</td>
+				<td style="width: 100px" class="text-center">{{today.products}}</td>
+				<td style="width: 180px" class="text-center">
+					<a ng-href="#/persistsaleproduct/{{today.id}}" class="btn btn-default btn-xs">Produtos</a>
+					<a ng-href="#/persistsaleexcel/{{today.id}}" class="btn btn-default btn-xs">Excel</a>
+					<a ng-href="#/persistsale/{{today.id}}" class="btn btn-primary btn-xs">
+						<i class="glyphicon glyphicon-pencil"></i>
+					</a>
+					<button ng-click="excluir(today, $index, 'today')" class="btn btn-danger btn-xs">
+						<i class="glyphicon glyphicon-remove"></i>
+					</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h3>Próximas</h3>
+<table class="table table-condensed table-bordered">
+	<thead>
+		<tr>
+			<th>Descrição</th>
+			<th style="width: 150px" class="text-center">Início</th>
+			<th style="width: 150px" class="text-center">Término</th>
+			<th style="width: 100px" class="text-center">Produtos</th>
+			<th style="width: 180px" class="text-center">Ações</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="next in dados.next">
+			<td>{{next.description}}</td>
+			<td style="width: 150px" class="text-center">{{getFormatData(next.startDate)}}</td>
+			<td style="width: 150px" class="text-center">{{getFormatData(next.finishDate)}}</td>
+			<td style="width: 100px" class="text-center">{{next.products}}</td>
+			<td style="width: 180px" class="text-center">
+				<a ng-href="#/persistsaleproduct/{{next.id}}" class="btn btn-default btn-xs">Produtos</a>
+				<a ng-href="#/persistsaleexcel/{{next.id}}" class="btn btn-default btn-xs">Excel</a>
+				<a ng-href="#/persistsale/{{next.id}}" class="btn btn-primary btn-xs">
+					<i class="glyphicon glyphicon-pencil"></i>
+				</a>
+				<button ng-click="excluir(next, $index, 'next')" class="btn btn-danger btn-xs">
+					<i class="glyphicon glyphicon-remove"></i>
+				</button>
+			</td>
+		</tr>
+	</tbody>
+</table>

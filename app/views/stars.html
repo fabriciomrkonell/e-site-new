@@ -1,0 +1,15 @@
+{% block content %}
+<div class="home-content">
+	<header class="home-content__header">
+    <h1 class="big-title big-title__favs">Favoritos</h1>
+    <section class="favs-content__print">
+      {% include 'includes/print.html' %}
+    </section>
+  </header>
+  <section class="home-content__products sales-content__products">
+    <div id="message" style='text-align: center; margin-top: 10px'>Carregando!</div>
+    <div id="all-products"></div>
+    {% include 'js/favoritos.js' %}
+  </section>
+</div>
+{% endblock %}

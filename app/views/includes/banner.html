@@ -1,0 +1,9 @@
+<section class="banner-site">
+  <div class="banner-site__content">
+    {% for banner in banners %}
+    	<a href="{{banner.url}}">
+      	<img src="{{banner.picture}}" class="banner-site__img">
+    	</a>
+    {% endfor %}
+  </div>
+</section>

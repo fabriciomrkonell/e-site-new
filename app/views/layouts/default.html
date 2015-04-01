@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% include '../includes/head.html' %}
+<body>
+
+  <div class="sfh">
+    {% include '../includes/header.html' %}
+
+    <div class="blue-ribbon"></div>
+
+    <main class="main-content" role="main">
+      <div class="wrapper main-content__border">
+        <aside class="site-sidebar">
+
+          <section class="site-logo">
+            <a href="/">
+              <img class="site-logo__img site-logo__rb" src="img/logo-ranchobom.png" alt="Supermercados Rancho Bom">
+              <img class="site-logo__img site-logo__rt" src="img/logo-redetop.png" alt="Rede Top">
+            </a>
+          </section>
+
+          <h1 class="big-title big-title__departments">Departamentos</h1>
+
+          {% include '../includes/dep-list.html' %}
+
+        </aside>
+
+        <div class="main-content__container">
+
+
+          {% if page == '/' %}
+            {% include '../includes/banner.html' %}
+            {% include '../index.html' %}
+            {% include '../js/banner.js' %}
+            {% include '../js/search.js' %}
+            {% include '../js/star.js' %}
+          {% endif %}
+
+          {% if page == '/favoritos' %}
+            {% include '../js/star.js' %}
+            {% include '../stars.html' %}
+          {% endif %}
+
+          {% if page == '/historia' %}
+            {% include '../includes/banner.html' %}
+            {% include '../js/banner.js' %}
+            {% include '../history.html' %}
+          {% endif %}
+
+          {% if page == '/lojas' %}
+            {% include '../includes/banner.html' %}
+            {% include '../js/banner.js' %}
+            {% include '../stores.html' %}
+          {% endif %}
+
+          {% if page == '/ofertas' %}
+            {% include '../sales.html' %}
+            {% include '../js/search.js' %}
+            {% include '../js/star.js' %}
+            {% include '../js/ofertas.js' %}
+          {% endif %}
+
+          {% if page == '/trabalhe-conosco' %}
+            {% include '../cv.html' %}
+          {% endif %}
+
+          {% if page == '/contato' %}
+            {% include '../contact.html' %}
+            {% include '../js/contact.js' %}
+          {% endif %}
+
+          {% if page == '/cadastre-se' %}
+            {% include '../customer.html' %}
+          {% endif %}
+
+        </div>
+      </div>
+    </main>
+
+    <div class="push-footer"></div>
+  </div>
+  {% include '../includes/footer.html' %}
+</body>
+</html>

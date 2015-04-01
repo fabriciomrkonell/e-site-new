@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/img/icon.png">
+    <title>Rancho Bom Supermercados</title>
+    <link href="/lib/bootstrap-css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
+  </head>
+  <body ng-controller="ctrl" class="ng-cloak">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <div class="container">
+       <div class="navbar-header">
+         <a class="navbar-brand" href="javascript:void(0)"></a>
+       </div>
+     </div>
+    </nav>
+    <div class="container">
+      <div class="row text-center" style="margin-top: 5%">
+        <div class="col-sm-12">
+          <img style="width: 250px" src="/img/logo-footer.png">
+        </div>
+      </div>
+      <br>
+      <form class="form-signin" role="form" ng-show="login">
+        <input type="text" class="form-control" placeholder="Email" name="username" ng-model="data.username">
+        <br>
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <button class="btn btn-success btn-block btn-lg" type="button" style="margin: 5px" ng-click="getPassword()" ng-disabled="btnLogin">Recuperar senha</button>
+          </div>
+        </div>
+      </form>
+      <form class="form-signin" role="form" ng-show="!login">
+        <input type="text" class="form-control" placeholder="Email" name="username" ng-model="data.username">
+        <br>
+        <input type="password" class="form-control" placeholder="Senha" ng-model="data.password">
+        <br>
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <button class="btn btn-success btn-block btn-lg" type="button" style="margin: 5px" ng-click="entrar()" ng-disabled="btnLogin">Entrar</button>
+          </div>
+        </div>
+      </form>
+      <div class="text-center" ng-show="!login">
+        <button type="button" ng-click="toogle();" class="btn btn-link">Recuperar senha</button>
+      </div>
+      <div class="text-center" ng-show="login">
+        <button type="button" ng-click="toogle();" class="btn btn-link">Fazer login</button>
+      </div>
+    <script src="/lib/angular/angular.min.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
+
+

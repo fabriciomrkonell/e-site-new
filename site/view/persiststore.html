@@ -1,0 +1,40 @@
+<h3 ng-show="update">Atualizar loja</h3>
+<h3 ng-show="!update">Nova loja</h3>
+<div class="row">
+	<div class="col-sm-5">
+ 		<div class="form-group">
+    	<label>Nome</label>
+    	<input type="text" class="form-control" ng-model="dados.name" placeholder="Nome">
+  	</div>
+  	<div class="form-group">
+    	<label>Telefone</label>
+    	<input type="text" class="form-control" ng-model="dados.phone" placeholder="Telefone">
+  	</div>
+  	<div class="form-group">
+    	<label>Email</label>
+    	<input type="text" class="form-control" ng-model="dados.email" placeholder="Email">
+  	</div>
+  	<div class="form-group">
+    	<label>Atendimento</label>
+    	<input type="text" class="form-control" ng-model="dados.treatment" placeholder="Atendimento">
+  	</div>
+  	<div class="form-group">
+    	<label>Nome do gerente</label>
+    	<input type="text" class="form-control" ng-model="dados.manager" placeholder="Nome do gerente">
+  	</div>
+    <div class="form-group">
+      <label>Latitude</label>
+      <input type="text" class="form-control" ng-model="dados.lat" placeholder="Latitude">
+    </div>
+    <div class="form-group">
+      <label>Longitude</label>
+      <input type="text" class="form-control" ng-model="dados.lon" placeholder="Longitude">
+    </div>
+ 		<div class="form-group">
+      <button type="button" class="btn btn-default" ng-click="persist(dados)">Salvar</button>
+      <button type="button" style="margin-left: 10px" ng-click="clear()" class="btn btn-default">Nova loja</button>
+      <a style="margin-left: 10px" href="#/searchstore" class="btn btn-default">Lojas</a>
+      <a ng-show="update" style="margin-left: 10px" href="#/persiststorepicture/{{dados.id}}" class="btn btn-default">Imagens</a>
+  	</div>
+	</div>
+</div>

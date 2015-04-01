@@ -1,0 +1,29 @@
+<h3>
+  Lojas
+  <a href="#/persiststore" class="btn btn-default button-title pull-right">Nova loja</a>
+</h3>
+<div>
+	<table class="table table-condensed table-bordered">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th style="width: 120px">Telefone</th>
+				<th style="width: 150px">Gerente</th>
+				<th style="width: 270px">Email</th>
+				<th style="width: 110px" class="text-center">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="store in dados">
+				<td>{{store.name}}</td>
+				<td style="width: 120px">{{store.phone}}</td>
+				<td style="width: 150px">{{store.manager}}</td>
+				<td style="width: 270px">{{store.email}}</td>
+				<td style="width: 110px" class="text-center">
+					<a ng-href="#persiststorepicture/{{store.id}}" class="btn btn-default btn-xs">Imagens</a>
+					<a ng-href="#/persiststore/{{store.id}}" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

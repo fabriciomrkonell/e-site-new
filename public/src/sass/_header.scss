@@ -1,0 +1,69 @@
+// Header file
+.main-header {
+  background: $rred;
+}
+
+.blue-ribbon {
+  position: absolute;
+  background: $rblue;
+  height: em(40);
+  width: 100%;
+  z-index: -1;
+}
+
+.dc1 {
+  @include span-columns(2);
+}
+
+.dc2 {
+  @include span-columns(9);
+}
+
+.dc3 {
+  @include span-columns(1);
+}
+
+.welcome-message {
+  float: left;
+  color: $w;
+}
+
+.site-nav {
+  text-align: center;
+  padding: 0 em(10);
+  display: inline-block;
+}
+
+.site-nav__item {
+  background: $rblue;
+  display: inline-block;
+  margin-left: -5px;
+  @include transform(skew(-15deg,0deg));
+
+  &:hover {
+    background: darken($rblue, 10%);
+  }
+}
+
+.site-nav__item_active {
+  background: darken($rblue, 10%);
+}
+
+.site-nav__link {
+  position: relative;
+  color: $w;
+  display: block;
+  line-height: 3.5;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.fb-icon {
+  float: right;
+  padding-top: 5px;
+}
+
+.fb-icon__img {
+  width: em(40);
+  height: em(40);
+}
